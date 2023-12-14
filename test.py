@@ -72,7 +72,7 @@ if st.button('Done'):
         st.text(f'{i+1}. {titles[i]} : {description[i]}')
     st.session_state["urls"]=urls
 
-num = st.number_input("Enter index of song to download", value=None, max_value=3)
+num = st.number_input("Enter index of song to download", value=0, max_value=3)
 
 if st.button("Download"):
     url = st.session_state["urls"]
