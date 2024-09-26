@@ -93,8 +93,10 @@ def get_yt_results(query: str):
         for i in v_ids:
             lnk = f'https://www.youtube.com/watch?v={i}'
             video = yt(lnk)
-
-            if video.length > 60:
+            
+            # Check if video length exists and is valid
+            video_length = video.vid_info.get('videoDetails', {}).get('lengthSeconds')
+            if video_length and int(video_length) > 60:
                 songs[video.title] = lnk
         return songs
     else:
