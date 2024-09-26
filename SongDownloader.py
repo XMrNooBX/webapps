@@ -148,8 +148,8 @@ if "last_searched_song" not in st.session_state:
 if "yt_refresh_trigger" not in st.session_state:
     st.session_state.yt_refresh_trigger = False
 
-st.title("🎶 :red[Song Downloader]")
-st.subheader("🎧 :green[Download your favorite tracks in a snap!]")
+st.title("🐈 :red[Meow-sic Downloader]")
+st.subheader("🎧 :green[Your purrfect tunes, just a click away!]")
 
 song = st.text_input(':red[🎵 Gaane ka naam bta]')
 
